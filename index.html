@@ -331,10 +331,10 @@
 							<header>
 								<h2>Yhteystiedot</h2>
 							</header>
-
-							<p>puh: 050 404 3908</p>
-							<p>email: joonas.ryynanen1@gmail.com</p>
-
+							<strong>
+								<p>puh: 050 404 3908</p>
+								<p>email: joonas.ryynanen1@gmail.com</p>
+							</strong>
 							<!-- <form method="post" action="#">
 								<div class="row">
 									<div class="col-6 col-12-mobile"><input type="text" name="name" placeholder="Name" /></div>
@@ -358,6 +358,8 @@
 
 				<!-- Copyright -->
 					<ul class="copyright">
+						<li id="motto">Miten ihminen voi syödä norsun?</li> 
+						<li>Pala kerrallaan.</li> 
 						<li>&copy; Joonas Ryynänen 2019.</li><li></li>
 					</ul>
 
@@ -371,6 +373,28 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script>
+				function getRandomInt(max) {
+					return Math.floor(Math.random() * Math.floor(max));
+				}
+
+				
+				let x = document.getElementById("motto");
+				let textArray = [
+					"Miten ihminen voi syödä norsun?",
+					"Miten monimutkainen tehtävä tehdään?",
+					"Miten ohjelmistoprojekti viedään loppuun?",
+					"Miten yrityksestä tehdään menestyvä?",
+					"Miten tavoitteisiin päästään?"
+				]
+
+				setInterval(function() {
+					var rand = getRandomInt(5);
+					x.innerHTML = textArray[rand];
+				}, 3000);
+				
+			</script>
 
 			
 	</body>
